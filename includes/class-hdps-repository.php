@@ -9,9 +9,9 @@ if (!defined('ABSPATH')) {
 /**
  * The only place a product's specification rows are ever written.
  *
- * "Product Specifications for WooCommerce" (the family covered by CVE-2025-54692 /
- * CVE-2026-11364) had an authentication-bypass flaw that let an authenticated attacker --
- * not necessarily anyone entitled to edit that specific product -- modify product data.
+ * "Product Specifications for WooCommerce" (CVE-2026-11364) had an authentication-bypass
+ * flaw that let an authenticated attacker -- not necessarily anyone entitled to edit that
+ * specific product -- modify product data.
  *
  * This class closes that by construction: save_specs() is called from exactly one place
  * (HDPS_Admin's product-data-panel save handler, hooked to WooCommerce's own

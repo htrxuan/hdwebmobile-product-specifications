@@ -12,7 +12,7 @@ Adds a "Specifications" tab to a product's edit screen (label / value rows like 
 
 ## Why this plugin exists
 
-The "Product Specifications for WooCommerce" family (CVE-2025-54692 / CVE-2026-11364) had an authentication-bypass flaw letting an authenticated attacker modify product data they shouldn't have been able to touch.
+The "Product Specifications for WooCommerce" family (CVE-2026-11364) had an authentication-bypass flaw letting an authenticated attacker modify product data they shouldn't have been able to touch.
 
 Closed by construction:
 
