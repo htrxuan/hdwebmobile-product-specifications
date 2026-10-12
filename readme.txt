@@ -16,8 +16,8 @@ Add a specifications table to any product -- editable only by users who can edit
 
 HDWebmobile Product Specifications adds a "Specifications" tab to a product's edit screen, where you list label / value rows -- "Material: 100% cotton", "Weight: 200g". A matching "Specifications" tab appears on the product page automatically whenever a product has any rows.
 
-= Why this plugin exists =
-The "Product Specifications for WooCommerce" plugin family (covered by CVE-2026-11364) had an authentication-bypass flaw: an authenticated attacker -- not necessarily anyone entitled to edit that specific product -- could modify product data.
+= Security by design =
+A common weakness in product-data tools is an authorization gap where an authenticated user -- not necessarily anyone entitled to edit that specific product -- can modify product data.
 
 This plugin is built so that mistake has nowhere to happen:
 
