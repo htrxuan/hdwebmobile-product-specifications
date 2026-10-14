@@ -36,6 +36,9 @@ This plugin is built so that mistake has nowhere to happen:
 * No specification templates shared across multiple products in this version
 * No import/export of specifications
 
+= Enjoying this plugin? =
+If it helps your site, please consider [leaving an honest review on WordPress.org](https://wordpress.org/support/plugin/hdwebmobile-product-specifications/reviews/#new-post) -- it helps other WordPress users find it. Found a problem or have an idea? Please [open a support topic](https://wordpress.org/support/plugin/hdwebmobile-product-specifications/) first so it can be fixed.
+
 == Installation ==
 
 1. Upload the plugin files to the `/wp-content/plugins/hdwebmobile-product-specifications` directory, or install the plugin through the WordPress plugins screen directly.
