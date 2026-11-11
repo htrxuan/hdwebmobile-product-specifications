@@ -3,7 +3,7 @@
 /**
  * Plugin Name: HDWebmobile Product Specifications
  * Plugin URI: https://hdwebmobile.com/plugins/hdwebmobile-product-specifications/
- * Description: Add a specifications table to any product -- editable only by users who can edit that specific product.
+ * Description: Add a Specifications tab with label / value rows (material, size, weight...) to any WooCommerce product.
  * Version: 1.0.0
  * Author: htrxuan - Han Tran
  * Author URI: https://hdwebmobile.com/

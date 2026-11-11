@@ -10,19 +10,21 @@ Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Add a specifications table to any product -- editable only by users who can edit that specific product.
+Add a Specifications tab with label / value rows (material, size, weight...) to any WooCommerce product.
 
 == Description ==
 
 HDWebmobile Product Specifications adds a "Specifications" tab to a product's edit screen, where you list label / value rows -- "Material: 100% cotton", "Weight: 200g". A matching "Specifications" tab appears on the product page automatically whenever a product has any rows.
 
+= What makes it different =
+* **Free-form rows per product.** Type any label and value straight into the product's own tab. Unlike WooCommerce attributes, there are no global attribute terms to create first, and nothing leaks into your shop filters or variations.
+* **Its own tab on the product page.** Specifications appear in a dedicated "Specifications" tab next to Description and Reviews, and only on products that have rows.
+* **Nothing to set up.** No settings screen to configure and no new database table -- rows are stored with the product and go wherever the product goes.
+* **Free, with every feature included.** There is no paid tier or upgrade.
+
 = Security by design =
-A common weakness in product-data tools is an authorization gap where an authenticated user -- not necessarily anyone entitled to edit that specific product -- can modify product data.
-
-This plugin is built so that mistake has nowhere to happen:
-
-* **Specifications are saved only through WooCommerce's own product-data-panel mechanism** (`woocommerce_process_product_meta`), which itself only ever runs from inside WordPress's own post-save flow for the exact product being edited -- already gated by WordPress core's `current_user_can('edit_post', $post_id)` before any meta box's save method runs at all.
-* **The save method checks it again anyway.** `HDPS_Repository::save_specs()` independently verifies `current_user_can('edit_product', $product_id)` for the specific product id it's given, rather than trusting that the call path was safe. Even if something else in a future version called this method, it would still refuse to write specs for a product the caller can't edit.
+* **Specifications are saved only through WooCommerce's own product-data-panel mechanism** (`woocommerce_process_product_meta`), which only runs from inside WordPress's own post-save flow for the exact product being edited -- already gated by WordPress core's `current_user_can('edit_post', $post_id)`.
+* **The save method checks it again anyway.** `HDPS_Repository::save_specs()` independently verifies `current_user_can('edit_product', $product_id)` for the specific product id it's given, so it refuses to write specs for a product the caller can't edit, whatever calls it.
 * **Every value is plain, escaped text.** Labels and values are sanitised on save and escaped again on display; there is no rich-text or HTML field.
 
 = Key Features =
